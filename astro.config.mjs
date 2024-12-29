@@ -1,5 +1,7 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  output: 'static', // Asegura que el output sea estático para Netlify
+  site: 'https://danielwebapp.netlify.app', // Reemplaza con tu URL de Netlify
+  base: '/' // Asegura que las rutas sean relativas a la raíz
+});
