@@ -1,34 +1,91 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/experiencia">Experiencia</a>
-		<h1>Experiencia</h1>
+---
+import MainLayout from '../layouts/MainLayouts.astro';
+const pageTitle = 'Experiencia';
+---
 
-        <h2>Experiencia laboral</h2>
-        <ul>
-            <li>CTO Tadosi (2024-actualidad)</li>
-        </ul>
-
-        <h2>Experiencia académica</h2>
-        <ul>
-            <li>CFGS Desarrollo Aplicaciones Web (2022-2024)</li>
-            <li>Grado en Ingeniería Informática (2023-actulalidad)</li>
-        </ul>
-
-        <h2>Lenguajes conocidos</h2>
-        <ul>
-            <li>JavaScript (React, Angular, Next.js, Astro)</li>
-            <li>Java (Spring)</li>
-            <li>Go</li>
-            <li>Python</li>
-        </ul>
-	</body>
-</html>
+<MainLayout title={pageTitle} activeLink="experiencia">
+  <section class="pt-8 pb-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">
+      <span data-translate="experiencia">Experiencia</span>
+    </h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Experiencia Laboral -->
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-6 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span data-translate="experienciaLaboral">Experiencia Laboral</span>
+        </h2>
+        <div class="border-l-2 border-blue-500 pl-4 ml-3">
+          <div class="mb-6 relative">
+            <div class="absolute -left-6 mt-1 w-4 h-4 rounded-full bg-blue-500"></div>
+            <h3 class="text-lg font-semibold text-gray-800">CTO</h3>
+            <p class="text-blue-600 font-medium">Tadosi</p>
+            <p class="text-gray-500 text-sm">2024 - Actualidad</p>
+            <p class="text-gray-600 mt-2">
+              <span data-translate="liderandoDesarrollo">Liderando el desarrollo tecnológico de soluciones fintech innovadoras y la gestión del equipo técnico.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Experiencia Académica -->
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-6 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+          </svg>
+          <span data-translate="experienciaAcademica">Experiencia Académica</span>
+        </h2>
+        <div class="border-l-2 border-blue-500 pl-4 ml-3">
+          <div class="mb-6 relative">
+            <div class="absolute -left-6 mt-1 w-4 h-4 rounded-full bg-blue-500"></div>
+            <h3 class="text-lg font-semibold text-gray-800">Grado en Ingeniería Informática</h3>
+            <p class="text-gray-500 text-sm">2023 - Actualidad</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-6 mt-1 w-4 h-4 rounded-full bg-blue-500"></div>
+            <h3 class="text-lg font-semibold text-gray-800">CFGS Desarrollo Aplicaciones Web</h3>
+            <p class="text-gray-500 text-sm">2022 - 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lenguajes conocidos -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-6 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+        <span data-translate="lenguajesTecnologias">Lenguajes y Tecnologías</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800">JavaScript</h3>
+          <p class="text-gray-600 text-sm">React, Angular, Next.js, Astro</p>
+        </div>
+        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800">Java</h3>
+          <p class="text-gray-600 text-sm">Spring</p>
+        </div>
+        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800">Go</h3>
+          <p class="text-gray-600 text-sm">
+            <span data-translate="backendServicios">Backend & Servicios</span>
+          </p>
+        </div>
+        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800">Python</h3>
+          <p class="text-gray-600 text-sm">
+            <span data-translate="desarrolloAnalisis">Desarrollo & Análisis</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

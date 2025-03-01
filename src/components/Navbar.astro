@@ -1,0 +1,38 @@
+---
+// Define qué página está activa
+const { activeLink } = Astro.props;
+import LanguageToggle from './LanguageToggle.astro';
+---
+
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <span class="text-xl font-bold text-blue-600">Daniel</span>
+      </div>
+      <div class="flex items-center">
+        <div class="flex space-x-6 mr-6">
+          <a 
+            href="/" 
+            class={`py-2 text-sm font-medium transition-colors ${activeLink === 'home' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
+          >
+            <span data-translate="home">Home</span>
+          </a>
+          <a 
+            href="/about" 
+            class={`py-2 text-sm font-medium transition-colors ${activeLink === 'about' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
+          >
+            <span data-translate="about">About</span>
+          </a>
+          <a 
+            href="/experiencia" 
+            class={`py-2 text-sm font-medium transition-colors ${activeLink === 'experiencia' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
+          >
+            <span data-translate="experiencia">Experiencia</span>
+          </a>
+        </div>
+        <LanguageToggle />
+      </div>
+    </div>
+  </div>
+</nav>
