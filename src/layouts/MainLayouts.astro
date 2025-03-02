@@ -10,17 +10,17 @@ const { title, activeLink } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title === 'Home' ? 'Daniel Gómez | Portfolio' : title + ' | Daniel Gómez'}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-gray-50 min-h-screen font-['Inter',sans-serif] text-gray-800">
+  <body class="bg-gray-50 font-['Inter',sans-serif] text-gray-800 flex flex-col min-h-screen">
     <Navbar activeLink={activeLink} />
     
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
       <slot />
     </main>
     
-    <footer class="bg-gray-800 text-white py-8 mt-16">
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
         <p>© 2024 Daniel. <span data-translate="derechosReservados">Todos los derechos reservados.</span></p>
       </div>
